@@ -17,7 +17,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
   <!-- JavaScript Libraries -->
   <script src="https://www.doctorstodoor.com/lib/jquery/jquery.min.js"></script>
   <script src="https://www.doctorstodoor.com/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -45,7 +44,7 @@
       }).then(function () {
          $.ajax({
   type:     "GET",
-  url:      "https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#resultFormSRFID").val(),
+  url:      "https://d2dapi01.azurewebsites.net/api/patient/circus?rfid=sampletest",
   success: (data) => {
     window.open("https://d2dapi01.azurewebsites.net/api/patient/circus?rfid=sampletest","_blank"); 
         swal({
