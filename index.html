@@ -1,1 +1,74 @@
-<h1>You are awesome </h1>
+<html>
+  <head>
+
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="https://www.doctorstodoor.com/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://www.doctorstodoor.com/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="https://www.doctorstodoor.com/lib/venobox/venobox.css" rel="stylesheet">
+  <link href="https://www.doctorstodoor.com/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="https://www.doctorstodoor.com/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+  <!-- JavaScript Libraries -->
+  <script src="https://www.doctorstodoor.com/lib/jquery/jquery.min.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/easing/easing.min.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/superfish/hoverIntent.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/superfish/superfish.min.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/wow/wow.min.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/venobox/venobox.min.js"></script>
+  <script src="https://www.doctorstodoor.com/lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="https://www.doctorstodoor.com/contactform/contactform.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="https://www.doctorstodoor.com/js/main.js"></script>
+    </head>
+  <body>
+    <h1>You are awesome </h1>
+    <input type="button" value="Check" class="btn btn-success" onclick="javascript:DownloadResult()">
+</body>
+<script>
+    function DownloadResult(){
+        swal({
+        title: "Trying to get report!",
+        text: "Report should start to download shortly.",
+        type: "info"
+      }).then(function () {
+         $.ajax({
+  type:     "GET",
+  url:      "https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#resultFormSRFID").val(),
+  success: (data) => {
+    window.open("https://d2dapi01.azurewebsites.net/api/patient/circus?rfid=sampletest","_blank"); 
+        swal({
+        title: "Report Downloading!",
+        text: "You report download starts.",
+        type: "success"
+      }).then(function () {
+        window.location.reload(true);
+      });
+  },
+  error: (error) => {
+        swal({
+        title: "Report Not Found!",
+        text: "Please try after sometime.",
+        type: "error"
+      }).then(function () {
+        window.location.reload(true);
+      });
+    }
+});
+      });
+      
+
+    }
+  </script>
+  </html>
