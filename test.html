@@ -9,7 +9,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <!--<link href="img/favicon.png" rel="icon">-->
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -27,13 +27,14 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
 
   <!--==========================
@@ -43,305 +44,47 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <a href="#intro" class="scrollto"><img src="img/logo1.png" alt="" title="">
-        <span style="margin-left: 15px;color:#ffffff;font-size: 18px;">Doctors To Door</span></a>
+        <a href="#intro" class="scrollto"><img src="img/logo.jpeg" alt="" title=""><span
+            style="margin-left: 15px;color:#ffffff">Doctors To Door</span></a>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#intro">Home</a></li>
-                      <li><a href="#services">Services</a></li>
-          <li><a href="#team">Our Team</a></li>
-                  <!--<li><a href="#gallery">Gallery</a></li>-->
-                  <li><a href="#about">About Us</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <!--<li class="buy-tickets"><a data-toggle="modal" data-target="#resultForm">Check Results</a></li>-->
-          <!--<li class="buy-tickets"><a data-toggle="modal" data-target="#appointmentForm">Book an appointment</a></li>-->
+          <li class="buy-tickets"><a data-toggle="modal" data-target="#appointmentForm">Book an appointment</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
 
-
+  <!--==========================
+    Intro Section
+  ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
- <br>
-      <h1 class="mb-4 pb-0">DOCTORS <br><span>TO</span> <br>Door</h1>
+      <p class="mb-4 pb-0"><br>
+      <a data-toggle="modal" data-target="#registrationForm" style="cursor:pointer;color:red">*Click here</a>
+      <span> to register for Covid 19 Test.</span>
+      </p>
+      <p class="mb-4 pb-0"><br>
+      <a data-toggle="modal" data-target="#appointmentForm" style="cursor:pointer;color:#1249e0">*Click here</a>
+      <span> to book an Appointment for a Doctor.</span>
+      </p>
+      <p class="mb-4 pb-0"><br>
+      <a style="cursor:pointer;color:#1249e0;text-decoration:none" target="_blank" href="https://www.covidwar.karnataka.gov.in/service1">*Click here</a>
+      <span> to check Covid results.</span>
+      </p>
+      <h1 class="mb-4 pb-0">DOCTORS<br><span>TO</span><br> Door</h1>
       <p class="mb-4 pb-0">We connect you</p>
-      <!--<p class="mb-4 pb-0">
-            <a data-toggle="modal" class="about-btn scrollto" href="#about" style="cursor:pointer;">About Us</a>
-            </p>-->
-      <p class="mb-4 pb-0">
-            <a data-toggle="modal" data-target="#registrationForm" class="about-btn scrollto" style="cursor:pointer;">Book a Covid-19 Test</a>
-	  <a data-toggle="modal" data-target="#appointmentForm" class="about-btn scrollto" style="cursor:pointer;">Book an Appointment</a>
-      <a data-toggle="modal" data-target="#resultForm" class="about-btn scrollto" style="cursor:pointer;">Covid-19 Test Results</a>
-                </p>
-                </div>
-  </section>
-
-     
-  <main id="main">
-        <!--==========================
-      Services Section
-    ============================-->
-    <section id="services" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Services</h2>
-          </div>
-        <div class="owl-carousel services-carousel" data-target="#appointmentForm">
-            <div class="servicecard">
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#appointmentForm">
-             <img src="img/Online Consult.png" data-toggle="modal" data-target="#appointmentForm" alt="Online Consult" class="img-fluid">
-             Book Online Consultations </a>
-                          </div>
-                      <div class="servicecard" data-target="#appointmentForm">
-                          <a href="javascript:void(0)" data-toggle="modal" data-target="#appointmentForm">
-              <img src="img/Cardiologist.png" data-toggle="modal" data-target="#appointmentForm" alt="Cardiologist" class="img-fluid">
-              Cardiologist</a>
-                         </div>
-                      <div class="servicecard" data-target="#appointmentForm">
-                          <a href="javascript:void(0)" data-toggle="modal" data-target="#appointmentForm">
-              <img src="img/Drugs.png"  data-toggle="modal" data-target="#appointmentForm" alt="Drugs" class="img-fluid">
-              Medical Drugs            
-                          </a>
-                          </div>
-          
-                     <div class="servicecard" data-target="#appointmentForm">
-                        <a href="javascript:void(0)" data-toggle="modal" data-target="#appointmentForm">
-              <img src="img/ElderCare.png" data-toggle="modal" data-target="#appointmentForm" alt="Elder Care" class="img-fluid">
-              Elder care schemes</a>
-                          </div>
-                      <div class="servicecard" data-target="#appointmentForm">
-                          <a href="javascript:void(0)" data-toggle="modal" data-target="#appointmentForm">
-              <img src="img/Physiotherapy.png" data-toggle="modal" data-target="#appointmentForm" alt="Physiothreapy" class="img-fluid">
-			  Physiotherapy
-                                                    </a>
-                          </div>
-                      <div class="servicecard" data-target="#appointmentForm">
-                          <a href="javascript:void(0)" data-toggle="modal" data-target="#appointmentForm">
-              <img src="img/Lab.png" data-toggle="modal" data-target="#appointmentForm" alt="Lab" class="img-fluid">
-			  Book a Lab test
-                                                  </a>
-                          </div>
-                            </div>
-      </div>
-    </section>
-          <!--==========================
-      Team Section
-    ============================-->
-    <section id="team" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Team</h2>
-          <!-- <p>Check our gallery from the recent events</p> -->
-        </div>
-        <div class="owl-carousel team-carousel">
-            <div class="profilecard">
-  <img src="img/Dilip.jpg" alt="Dilip" style="width:100%">
-  <h5>Dr Dilip Gowda N</h5>
-  <p class="title">MS Orthopedics, MBBS</p>
-  </div>
-  <div class="profilecard">
-  <img src="img/Darshan.jpeg" alt="Darshan" style="width:100%">
-  <h5>Dr Darshan GR</h5>
-  <p class="title">MD Pulmonary Medicine, MBBS</p>
-  </div>
- <div class="profilecard">
-  <img src="img/Haricharan.jpeg" alt="Haricharan" style="width:100%">
-  <h5>Dr Haricharan</h5>
-  <p class="title">MS Orthopedics, MBBS, Administrator and Nodal officer, Charaka hospital, Bangalore</p>
-  </div>
-                     <div class="profilecard">
-  <img src="img/Varun.jpeg" alt="Varun" style="width:100%">
-  <h5>Dr Varun Kumar J</h5>
-  <p class="title">MBBS, DNB, FIAGES, FMAS.
-                LASER , Laparoscopic and General Surgeon.</p>
-  </div>
-           <div class="profilecard">
-  <img src="img/Sakeath.jpeg" alt="Sakeath" style="width:100%">
-  <h5>Dr Sakeath Saki</h5>
-  <p class="title">MBBS</p>
-  </div>
-                     <div class="profilecard">
-  <img src="img/Harsha.jpg" alt="Harsha" style="width:100%">
-  <h5>Dr Harsha MD</h5>
-  <p class="title">BDS</p>
-  </div>
-          </div>
-              </div>
-    </section>
-    <!--==========================
-      Gallery Section
-    ============================-->
-    <!--<section id="gallery" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our gallery for the recent events</p>
-        </div>
-      </div>
-      <div class="owl-carousel gallery-carousel">
-        <a href="img/Gallery1.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Gallery1.jpeg"
-            alt=""></a>
-        <a href="img/Gallery2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/Gallery2.jpg"
-            alt=""></a>
-        <a href="img/Gallery3.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Gallery3.jpeg"
-            alt=""></a>
-        <a href="img/Gallery4.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Gallery4.jpeg" 
-        alt=""></a>
-        <a href="img/Gallery5.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Gallery5.jpeg"
-            alt=""></a>
-        <a href="img/Gallery6.png" class="venobox" data-gall="gallery-carousel"><img src="img/Gallery6.png" 
-        alt=""></a>
-        </div>
-    </section>-->
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about" class="wow fadeInUp">
-      <div class="container">
-                  <div class="section-header">
-          <h2>About Us</h2>
-          </div>
-          <div class="content">
-        <div class="row">
-          <div class="col-lg-12">
-            <!--<h1 style="text-align: center;color:#05f2e6">About Us</h1>-->
-            <p style="font-size: 20px;text-align:justify;">We are a team of doctors with vast years of experience in medical practice. 
-Our team works with service as the main aim, 
-we have come forward to serve the health community to make people feel safe during these troubled times of the pandemic by counselling patients and their family about the entire process of treatment and to promote home quarantine for asymptomatic, mild and moderately symptomatic patients.
-            </p>
-                     </div>
-          </div>
-          <!--<div class="col-lg-6">
-            <img class="max-auto img-responsive" src="img/courosel3.jpeg">
-          </div>-->
-          <!-- <div class="col-lg-3">
-            <h3>When</h3>
-            <h2 style="color:red">24/7<br></h2>
-          </div> -->
-        </div>
-      </div>
-    </section>
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact" class="section-bg wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Contact Us</h2>
-                  </div>
-                  <h4 style="text-align: center;font-weight: bold;">Nandi Health Consultation and services</h4>
-        <div class="row contact-info">
-            <div class="col-md-12">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-                            <address>Door no. 20, 12th b cross, MTS layout,Kengeri Upanagar,Bangalore - 560060</address>
-              <p><a>+91 9742885671</a></p>
-              <p><a>+91 7411232380</a></p>
-              <p><a href="mailto:doctorstodoor@gmail.com">doctorstodoor@gmail.com</a></p>
-            </div>
-          </div>
-          <!--<div class="col-md-4">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>Door no. 20, 12th b cross, MTS layout,Kengeri Upanagar,Bangalore - 560060</address>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a>+91 9742885671</a></p>
-              <p><a>+91 7411232380</a></p>
-                         </div>
-                         
-          </div>
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p><a href="Doctorstodoor@gmail.com">doctorstodoor@gmail.com</a></p>
-            </div>
-          </div>-->
-        </div>
-        <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-        <!--<div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-info">
-            <p style="font-size: 24px;font-weight: bold;">DoctorsToDoor</p>
-            <p>DoctorsToDoor is a team of doctors with vast years of experience in medical practice. Our team works with service as the main aim, we have come forward to serve the health community to make people feel safe during these troubled times of the pandemic by counselling patients and their family about the entire process of treatment and to promote home quarantine for asymptomatic , mild and moderately symptomatic patients.</p>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#about">About us</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#speakers">Services</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
-            <h5 style="font-weight: bold;">Nandi Health Consultation and Services</h5>
-            <p>
-              Door no. 20, 12th b cross <br>
-              MTS layout,Kengeri Upanagar
-              Bangalore - 560060<br>
-              India <br> 
-              <strong>Phone:</strong>+91 9742885671<br>
-              <strong>Phone:</strong>+91 7411232380<br>
-              <strong>Email:</strong>doctorstodoor@gmail.com<br>
-            </p>
-            <div class="social-links">
-              <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
-                  class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj" target="_blank"><i
-                  class="fa fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
-    <div class="container">
-              <div class="copyright">
-        &copy; 2020 <strong>Doctors To Door</strong>. All Rights Reserved
-      </div>
+      <a href="#about" class="about-btn scrollto">About Us</a>
     </div>
-    <div>
-                <div class="footer-top">
-                    <div class="container">
-                        <div class="row">
-<div class="social-links center-block">
-              <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
-                  class="fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj" target="_blank"><i
-                  class="fa fa-instagram"></i></a>
-            </div>
-            </div>
-                </div>
-                </div>
-</div>
-      </footer>
-      
-      <!--Covid registration popup-->
-     <div class="modal fade" id="registrationForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  </section>
+  <!--Covid registration popup-->
+  <div class="modal fade" id="registrationForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
 
     <div class="modal-dialog" role="document">
@@ -373,18 +116,18 @@ we have come forward to serve the health community to make people feel safe duri
                 Placeholder="Please enter your Phone Number" min="5555555555" max="9999999999" maxLength="10"
                 class="form-control validate" required>
             </div>
-            <!--<div class="md-form mb-5">
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Email ID<span
                   class="mandatory">*</span></label>
               <input type="email" id="registrationFormEmail" Placeholder="Please enter your email address"
                 class="form-control validate" required>
-            </div>-->
-            <!--<div class="md-form mb-5">
+            </div>
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Aadhar Number<span
                   class="mandatory">*</span></label>
               <input type="text" Placeholder="Please enter your Aadhar Number" id="registrationFormAadharNumber"
                 pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" maxLength="12" class="form-control validate">
-            </div>-->
+            </div>
             <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Residential Address<span
                   class="mandatory">*</span></label>
@@ -396,19 +139,19 @@ we have come forward to serve the health community to make people feel safe duri
                   class="mandatory">*</span>:-</label>
               <input type="text" id="registrationFormHistoryFrom" Placeholder="Please enter the place you travelled from"
                 class="form-control validate">
-            </div>-->
-            <!--<div class="md-form mb-5">
+            </div>
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">To<span class="mandatory">*</span>:-</label>
               <input type="text" id="registrationFormHistoryTo" Placeholder="Please enter the place you travelled to"
                 class="form-control validate">
             </div>-->
-            <!--<div class="md-form mb-5">
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Duration of Symptoms(in days)<span
                   class="mandatory">*</span>:-</label>
               <input type="text" id="registrationFormDuration" Placeholder="Please enter duration of your symptoms"
                 class="form-control validate">
-            </div>-->
-            <!--<div class="md-form mb-5">
+            </div>
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">History of contact with +ve patient:-</label>
               <div class="radio">
                 <label><input type="radio" id="registrationFormPatientHistory" name="optradio"
@@ -418,8 +161,8 @@ we have come forward to serve the health community to make people feel safe duri
                 <label><input type="radio" id="registrationFormPatientHistory" name="optradio" value="Yes"
                     checked>&nbspNo</label>
               </div>
-            </div>-->
-            <!--<div class="md-form mb-5">
+            </div>
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Previous Condition:-</label>
               <div class="checkbox">
                 <label><input type="checkbox" class="pre-condition" name="PreCondition" id="Condition"
@@ -447,7 +190,7 @@ we have come forward to serve the health community to make people feel safe duri
                 <label><input type="checkbox" name="PreCondition" class="pre-condition" value="HOAS">&nbspHistory of
                   alcohol or smoking</label>
               </div>
-            </div>-->
+            </div>
           </div>
           <div class="modal-footer d-flex justify-content-center">
             <input class="btn btn-success" type="submit" value="Register" onClick="Register();">
@@ -457,8 +200,8 @@ we have come forward to serve the health community to make people feel safe duri
     </div>
   </div>
 
-     <!--Appointment section pop-up-->
-     <div class="modal fade" id="appointmentForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <!--Appointment section pop-up-->
+  <div class="modal fade" id="appointmentForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <form>
@@ -490,25 +233,26 @@ we have come forward to serve the health community to make people feel safe duri
                 Placeholder="Please enter your Mobile Number" min="5555555555" max="9999999999" maxLength="10"
                 class="form-control validate" required>
             </div>
-            <!--<div class="md-form mb-5">
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Alternative Contact Number</label>
               <input type="text" pattern="[0-9]{10}" id="appointmentFormAltMobileNumber"
                 Placeholder="Please enter your alternative mobile number" min="5555555555" max="9999999999"
                 maxLength="10" class="form-control validate">
-            </div>-->
-            <!--<div class="md-form mb-5">
+            </div>
+
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Email Address<span
                   class="mandatory">*</span></label>
               <input type="email" id="appointmentFormEmail" Placeholder="Please enter your email adddress"
                 class="form-control validate" required>
-            </div>-->
-            <!--<div class="md-form mb-5">
+            </div>
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Aadhar Number<span
                   class="mandatory">*</span></label>
               <input type="text" pattern="^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$"
                 Placeholder="Please enter your Aadhar Number" id="appointmentFormAadharNumber" maxLength="12"
                 class="form-control validate" required>
-            </div>-->
+            </div>
             <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Residential address<span
                   class="mandatory">*</span></label>
@@ -521,16 +265,17 @@ we have come forward to serve the health community to make people feel safe duri
               <input type="text" id="appointmentFormReason" Placeholder="Please enter reason for consultation"
                 class="form-control validate" required>
             </div>
-            <!--<div class="md-form mb-5">
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Duration of Symptoms(in days)<span
                   class="mandatory">*</span>:-</label>
               <input type="number" id="appointmentFormDuration" Placeholder="Please enter the duration of Symptoms"
                 class="form-control validate" required>
-            </div>-->
+            </div>
             <div class="md-form mb-5">
               <p>Date: <input type="date" id="appointmentFormDatepicker"></p>
             </div>
-            <!--<div class="md-form mb-5">
+
+            <div class="md-form mb-5">
               <label data-error="wrong" data-success="right" for="form29">Previous Condition:-</label>
               <div class="checkbox">
                 <label><input type="checkbox" name="PreCondition" class="pre-condition"
@@ -558,7 +303,7 @@ we have come forward to serve the health community to make people feel safe duri
                 <label><input type="checkbox" name="PreCondition" class="pre-condition" value="HOAS">&nbspHistory of
                   alcohol or smoking</label>
               </div>
-            </div>-->
+            </div>
           </div>
           <div class="modal-footer d-flex justify-content-center">
             <input type="submit" value="Book" class="btn btn-success">
@@ -567,39 +312,298 @@ we have come forward to serve the health community to make people feel safe duri
       </form>
     </div>
   </div>
-    <!--Appointment pop-up-ends-->
-    
-    <!--Result Section pop-up-->
-    <div class="modal fade" id="resultForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  
-    aria-hidden="true">
-        <div class="modal-dialog" role="document">
-      <form>
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100 font-weight-bold">Results</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+  <!--Appointment pop-up-ends-->
+  <main id="main">
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>About</h2>
+            <p>Consult India's top rated doctors and therapists online and connect them to your doors. We work with
+              Doctors, Nurses, Diagnostics centers and others to improve health outcomes for patients aswell as
+              profitability of partners.</p>
           </div>
-          <div id="resultFormError"></div>
-          <div class="modal-body mx-3">
-            <div class="md-form mb-5">
-              <label for="name" for="form34" aria-describedby="inputGroupPrepend" required>SRF ID<span
-                  class="mandatory">*</span></label>
-              <input type="text" id="resultFormSRFID" class="form-control" Placeholder="Please enter SRF ID"
-                required />
-            </div>
-                   </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <input type="submit" value="Check" class="btn btn-success">
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <h5>Bangalore</h5>
+          </div>
+          <div class="col-lg-3">
+            <h3>When</h3>
+            <h2 style="color:red">24/7<br></h2>
           </div>
         </div>
-      </form>
+      </div>
+    </section>
+    <!--==========================
+      Speakers Section
+    ============================-->
+    <section id="speakers" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Services</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Online Consult.jpeg" alt="Speaker 1" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Doctor Consultation</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Cardiologist.jpeg" alt="Speaker 2" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Cardiac care</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Drugs.jpeg" alt="Speaker 3" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Drugs</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Mother and child care.jpeg" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Mother and child care</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/ElderCare.jpeg" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Elder care</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Physiotherapy.jpeg" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Physiotherapy</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Dental Care.jpeg" alt="Speaker 4" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Dental Care</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Lab.jpeg" alt="Speaker 5" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Lab tests</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker">
+              <img src="img/Counciling.jpeg" alt="Speaker 6" class="img-fluid">
+              <div class="details">
+                <h3><a href="">Counselling</a></h3>
+                <div class="social">
+                  <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                      class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj"
+                    target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--==========================
+            Gallery Section
+    ============================-->
+    <section id="gallery" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Gallery</h2>
+          <p>Check our gallery from the recent events</p>
+        </div>
+      </div>
+      <div class="owl-carousel gallery-carousel">
+        <a href="img/Cardiologist.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Cardiologist.jpeg"
+            alt=""></a>
+        <a href="img/Counciling.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Counciling.jpeg"
+            alt=""></a>
+        <a href="img/Dental Care.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Dental Care.jpeg"
+            alt=""></a>
+        <a href="img/Drugs.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Drugs.jpeg" alt=""></a>
+        <a href="img/ElderCare.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/ElderCare.jpeg"
+            alt=""></a>
+        <a href="img/Lab.jpeg" class="venobox" data-gall="gallery-carousel"><img src="img/Lab.jpeg" alt=""></a>
+        <a href="img/Mother and child care.jpeg" class="venobox" data-gall="gallery-carousel"><img
+            src="img/Mother and child care.jpeg" alt=""></a>
+        <a href="img/Online Consult.jpeg" class="venobox" data-gall="gallery-carousel"><img
+            src="img/Online Consult.jpeg" alt=""></a>
+      </div>
+    </section>
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Nandi Health Consultation and services</p>
+        </div>
+        <div class="row contact-info">
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>Door no. 20, 12th b cross, MTS layout,Kengeri Upanagar,Bangalore - 560060</address>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a>+91 7411232380</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="Doctorstodoor@gmail.com">Doctorstodoor@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-info">
+            <p style="font-size: 24px;font-weight: bold;">DoctorsToDoor</p>
+            <p>Consult India's top rated doctors and therapists online and connect them to your doors. We work with
+              Doctors, Nurses, Diagnostics centers and others to improve health outcomes for patients aswell as
+              profitability of partners.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#about">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#speakers">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Door no. 20, 12th b cross <br>
+              MTS layout,Kengeri Upanagar
+              Bangalore - 560060<br>
+              India <br>
+              <strong>Phone:</strong>+91 7411232380<br>
+              <strong>Email:</strong>doctorstodoor@gmail.com<br>
+            </p>
+            <div class="social-links">
+              <a href="https://twitter.com/doctorstodoor?s=08" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/pg/doctorstodoor/community/" target="_blank"><i
+                  class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/invites/contact/?i=vfgs0mdy9222&utm_content=h3tv4wj" target="_blank"><i
+                  class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-        
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong onclick="circus()">Doctors To Door</strong>. All Rights Reserved
+      </div>
+      <a id="dwnldlink" target="_blank" href="#">Enter RFID</a>
+      <input id="txtrfid" type="text" style="color:black;"></input>
+      <input type = "button" id="download" value="Download Report" style="color:black;"></input>
     </div>
-    <!--Result Section ends here-->
-    
+  </footer>
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
@@ -615,7 +619,18 @@ we have come forward to serve the health community to make people feel safe duri
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
   <script>
-
+function circus()
+{
+     $.ajax({
+        url: "https://d2dapi01.azurewebsites.net/api/patient/circus",
+        type: "GET",
+        crossDomain: true,
+        success: function (data) {
+          console.log(data);
+        }
+      });
+    
+}
     function SubmitAppointment() {
       var checkedVlaue = [];
       $('input[name="PreCondition"]:checked').each(function () {
@@ -696,40 +711,6 @@ we have come forward to serve the health community to make people feel safe duri
         window.location.reload(true);
       });
     }
-    
-    function DownloadResult(){
-        swal({
-        title: "Trying to get report!",
-        text: "Report should start to download shortly.",
-        type: "info"
-      }).then(function () {
-         $.ajax({
-  type:     "GET",
-  url:      "https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#resultFormSRFID").val(),
-  success: (data) => {
-    window.open("https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#resultFormSRFID").val(),"_blank"); 
-        swal({
-        title: "Report Downloading!",
-        text: "You report download starts.",
-        type: "success"
-      }).then(function () {
-        window.location.reload(true);
-      });
-  },
-  error: (error) => {
-        swal({
-        title: "Report Not Found!",
-        text: "Please try after sometime.",
-        type: "error"
-      }).then(function () {
-        window.location.reload(true);
-      });
-    }
-});
-      });
-      
-
-    }
 
     const appointmentForm = document.getElementById("appointmentForm");
     appointmentForm.addEventListener('submit', function (e) {
@@ -740,12 +721,14 @@ we have come forward to serve the health community to make people feel safe duri
     registrationForm.addEventListener('submit', function (e) {
       e.preventDefault();
       SubmitRegistration();
-    });
-    const resultForm = document.getElementById("resultForm");
-    resultForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      DownloadResult();
-    });
+    })
+    $(document).ready(function(){
+  $("#download").click(function(){
+      document.getElementById("dwnldlink").href = "https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#txtrfid").val();
+      document.getElementById("dwnldlink").click();
+  });
+});
+    
   </script>
 </body>
 
