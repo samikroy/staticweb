@@ -177,35 +177,134 @@ $(".pre-condition").click(function(){
   alert("My favourite programming languages are: " + test);
 });
 
-function Register(){
-  var checkedVlaue = [];
-  $('input[name="PreCondition"]:checked').each(function() {
-    checkedVlaue.push($(this).val());
-  });
-  var data = {
-   Name: $("#name").val(),
-   Age: $("#age").val(),
-   PhoneNumber:$("#Phone-Number").val(),
-   AlternativePhoneNumber:$("#Alternate-Number").val(),
-   Email:$("#email").val(),
-   AadharNumber: $("#ANumber").val(),
-   PanNumber: $("#PAN-Number").val(),
-   VoterID:$("#VoterID").val(),
-   TravelHistoryFrom: $("#HistoryFrom").val(),
-   TravelHistoryTo: $("#HistoryTo").val(),
-   DurationOfSymptoms: $("#duration").val(),
-   HistoryOfContactWithPositivePatient:$("#PatientHistory").val(),
-   PreConditionCheck: checkedVlaue.toString(),
-  }
-
-  $.ajax({
-    url :"http://d2dapi01.azurewebsites.net/api/values",
-    type: "POST",
-    data:data,
-    success : function(data){
-      console.log(data)
-    }
-  });
-}
-
 });
+function SubmitAppointment() {
+      var checkedVlaue = [];
+      $('input[name="PreCondition"]:checked').each(function () {
+        checkedVlaue.push($(this).val());
+      });
+      var data = {
+        Name: $("#appointmentFormName").val(),
+        Age: $("#appointmentFormAge").val(),
+        PhoneNumber: $("#appointmentFormMobileNumber").val(),
+        AlternativePhoneNumber: $("#appointmentFormAltMobileNumber").val(),
+        Email: $("#appointmentFormEmail").val(),
+        AadharNumber: $("#appointmentFormAadharNumber").val(),
+        ResidentialAddress: $("#appointmentFormAddress").val(),
+        ReasonForConsulation: $("#appointmentFormReason").val(),
+        //TravelHistoryFrom: $("#appointmentFormHistoryFrom").val(),
+        //TravelHistoryTo: $("#appointmentFormHistoryTo").val(),
+        DurationOfSymptoms: $("#appointmentFormDuration").val(),
+        //HistoryOfContactWithPositivePatient: $("#appointmentFormPatientHistory").val(),
+           RequestedDate: $("#appointmentFormDatepicker").val(),
+        PreConditionCheck: checkedVlaue.toString()
+      }
+      $.ajax({
+        url: "https://d2dapi01.azurewebsites.net/api/patient/InsertPatientsAppointment",
+        type: "POST",
+        crossDomain: true,
+        data: data,
+        success: function (data) {
+          console.log(data);
+        }
+      });
+
+      swal({
+        title: "Appointment requested !",
+        text: "Our Medical team will give you a callback shortly.",
+        type: "success"
+      }).then(function () {
+        window.location.reload(true);
+      });
+    }
+
+    function SubmitRegistration() {
+      var checkedVlaue = [];
+      $('input[name="PreCondition"]:checked').each(function () {
+        checkedVlaue.push($(this).val());
+      });
+      var data = {
+        Name: $("#registrationFormName").val(),
+        Age: $("#registrationFormAge").val(),
+        PhoneNumber: $("#registrationFormPhoneNumber").val(),
+        AlternativePhoneNumber: $("#registrationFormAltMobileNumber").val(),
+        Email: $("#registrationFormEmail").val(),
+        AadharNumber: $("#registrationFormAadharNumber").val(),
+        ResidentialAddress: $("#registrationFormResidentialAddress").val(),
+        PanNumber: $("#registrationFormPANNumber").val(),
+        VoterID: $("#registrationFormVoterID").val(),
+        TravelHistoryFrom: $("#registrationFormHistoryFrom").val(),
+        TravelHistoryTo: $("#registrationFormHistoryTo").val(),
+        DurationOfSymptoms: $("#registrationFormDuration").val(),
+        HistoryOfContactWithPositivePatient: $("#registrationFormPatientHistory").val(),
+        PreConditionCheck: checkedVlaue.toString()
+      }
+
+      $.ajax({
+        url: "https://d2dapi01.azurewebsites.net/api/patient/InsertPatientsRegistration",
+        type: "POST",
+        crossDomain: true,
+        data: data,
+        success: function (data) {
+          console.log(data);
+        }
+      });
+
+      swal({
+        title: "Registration successful!",
+        text: "Our Medical team will give you a callback shortly.",
+        type: "success"
+      }).then(function () {
+        window.location.reload(true);
+      });
+    }
+    
+    function DownloadResult(){
+        swal({
+        title: "Trying to get report!",
+        text: "Report should start to download shortly.",
+        type: "info"
+      }).then(function () {
+         $.ajax({
+  type:     "GET",
+  url:      "https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#resultFormSRFID").val(),
+  success: (data) => {
+    window.open("https://d2dapi01.azurewebsites.net/api/patient/circus?rfid="+ $("#resultFormSRFID").val(),"_blank"); 
+        swal({
+        title: "Report Downloading!",
+        text: "You report download starts.",
+        type: "success"
+      }).then(function () {
+        window.location.reload(true);
+      });
+  },
+  error: (error) => {
+        swal({
+        title: "Report Not Found!",
+        text: "Please try after sometime.",
+        type: "error"
+      }).then(function () {
+        window.location.reload(true);
+      });
+    }
+});
+      });
+      
+
+    }
+
+    const appointmentForm = document.getElementById("appointmentForm");
+    appointmentForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      SubmitAppointment();
+    });
+    const registrationForm = document.getElementById("registrationForm");
+    registrationForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      SubmitRegistration();
+    });
+    const resultForm = document.getElementById("resultForm");
+    resultForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      DownloadResult();
+    });
